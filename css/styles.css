@@ -12,38 +12,38 @@
   --bg-card: #17090C;
   --bg-card-hover: #210C11;
   --bg-glass: rgba(10, 4, 6, 0.92);
-  
+
   --red-soft: rgba(163, 0, 30, 0.2);
   --red-muted: #6B000F;
   --red-crimson: #990017;
   --red-savage: #B8001F;
   --red-deep: #660010;
   --burgundy: #3D0008;
-  
+
   --gold-accent: #E0C097;
   --champagne-glow: rgba(224, 192, 151, 0.2);
-  
+
   /* Text Colors - High Contrast Silk White & Soft Rose-Silver */
   --text-main: #F7EBEF;
   --text-muted: #C7B0B7;
   --text-light: #997F86;
   --text-gold: #E5C3A6;
   --text-white: #FFFFFF;
-  
+
   --border-light: rgba(184, 0, 31, 0.28);
   --border-active: rgba(184, 0, 31, 0.65);
-  
+
   /* Typography */
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-handwriting: 'Caveat', cursive, sans-serif;
-  
+
   /* Shadows & Glows */
   --shadow-soft: 0 10px 30px -5px rgba(136, 0, 23, 0.25);
   --shadow-hover: 0 20px 45px -5px rgba(184, 0, 31, 0.4);
   --shadow-polaroid: 0 15px 35px rgba(0, 0, 0, 0.85);
   --glow-red: 0 0 30px rgba(184, 0, 31, 0.5);
-  
+
   /* Transitions */
   --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -81,7 +81,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: 
+  background:
     radial-gradient(circle at 15% 15%, rgba(163, 0, 30, 0.25) 0%, transparent 45%),
     radial-gradient(circle at 85% 75%, rgba(102, 0, 16, 0.35) 0%, transparent 50%),
     radial-gradient(circle at 50% 50%, rgba(184, 0, 31, 0.12) 0%, transparent 65%);
@@ -1186,19 +1186,36 @@ footer {
    11. Keyframe Animations
    -------------------------------------------------------------------------- */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.15); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.15);
+  }
 }
 
 /* --------------------------------------------------------------------------
    12. Responsive Breakpoints
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
+
   .hero-grid,
   .about-grid,
   .project-grid,
@@ -1206,11 +1223,11 @@ footer {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .hero-title {
     font-size: 3rem;
   }
-  
+
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1220,28 +1237,28 @@ footer {
   .nav-links {
     display: none;
   }
-  
+
   .nav-mobile-toggle {
     display: block;
   }
-  
+
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .metrics-banner {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
   }
-  
+
   .skills-wrapper {
     grid-template-columns: 1fr;
   }
-  
+
   .strengths-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .gallery-grid {
     grid-template-columns: 1fr;
   }
