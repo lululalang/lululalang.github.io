@@ -1,60 +1,52 @@
 /* ==========================================================================
-   Kimlang Than - Elegant Warm Mocha & Espresso Portfolio Design System ☕🍫✨
+   Kimlang Than - Deep Wine & Dark Velvet Savage Portfolio Palette 🍷🩸
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. CSS Custom Properties / User Palette:
-      - #443c3c (Dark Warm Charcoal)
-      - #44403e (Deep Slate Taupe)
-      - #4d413b (Rich Espresso Cocoa)
-      - #705548 (Warm Mocha / Terracotta Rose Wood)
-      - #574e47 (Smoky Walnut / Soft Taupe)
+   1. CSS Custom Properties / Deep Wine, Blood Crimson & Obsidian Palette
    -------------------------------------------------------------------------- */
 :root {
-  /* Palette Tokens from User Image */
-  --color-dark-charcoal: #443c3c;
-  --color-slate-taupe:   #44403e;
-  --color-espresso:      #4d413b;
-  --color-warm-mocha:    #705548;
-  --color-smoky-walnut:  #574e47;
-
-  /* Design System Assignments */
-  --bg-primary:          #443c3c;
-  --bg-secondary:        #44403e;
-  --bg-card:             #4d413b;
-  --bg-card-hover:       #574e47;
-  --bg-glass:            rgba(68, 60, 60, 0.92);
-
-  --accent-mocha:        #705548;
-  --accent-walnut:       #574e47;
-  --accent-soft:         rgba(112, 85, 72, 0.25);
+  /* Ultra-Dark Savage Luxury Palette */
+  --bg-primary: #0A0406;
+  --bg-secondary: #12070A;
+  --bg-card: #17090C;
+  --bg-card-hover: #210C11;
+  --bg-glass: rgba(10, 4, 6, 0.92);
   
-  --champagne-highlight: #F5EAE4;
-  --gold-warm:           #E8D4C8;
-
-  /* Text Colors - High Contrast Silk Pearl & Warm Champagne */
-  --text-main:           #F8F2EE;
-  --text-muted:          #D6C4B8;
-  --text-light:          #B5A094;
-  --text-white:          #FFFFFF;
-
-  --border-light:        rgba(112, 85, 72, 0.4);
-  --border-active:       #705548;
-
+  --red-soft: rgba(163, 0, 30, 0.2);
+  --red-muted: #6B000F;
+  --red-crimson: #990017;
+  --red-savage: #B8001F;
+  --red-deep: #660010;
+  --burgundy: #3D0008;
+  
+  --gold-accent: #E0C097;
+  --champagne-glow: rgba(224, 192, 151, 0.2);
+  
+  /* Text Colors - High Contrast Silk White & Soft Rose-Silver */
+  --text-main: #F7EBEF;
+  --text-muted: #C7B0B7;
+  --text-light: #997F86;
+  --text-gold: #E5C3A6;
+  --text-white: #FFFFFF;
+  
+  --border-light: rgba(184, 0, 31, 0.28);
+  --border-active: rgba(184, 0, 31, 0.65);
+  
   /* Typography */
-  --font-serif:          'Playfair Display', Georgia, serif;
-  --font-sans:           'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-handwriting:    'Caveat', cursive, sans-serif;
-
-  /* Shadows & Ambient Glows */
-  --shadow-soft:         0 10px 30px -5px rgba(0, 0, 0, 0.35);
-  --shadow-hover:        0 20px 45px -5px rgba(112, 85, 72, 0.45);
-  --shadow-polaroid:      0 15px 35px rgba(0, 0, 0, 0.5);
-  --glow-mocha:          0 0 25px rgba(112, 85, 72, 0.5);
-
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-handwriting: 'Caveat', cursive, sans-serif;
+  
+  /* Shadows & Glows */
+  --shadow-soft: 0 10px 30px -5px rgba(136, 0, 23, 0.25);
+  --shadow-hover: 0 20px 45px -5px rgba(184, 0, 31, 0.4);
+  --shadow-polaroid: 0 15px 35px rgba(0, 0, 0, 0.85);
+  --glow-red: 0 0 30px rgba(184, 0, 31, 0.5);
+  
   /* Transitions */
-  --transition-smooth:    all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-  --transition-bounce:    all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* --------------------------------------------------------------------------
@@ -81,7 +73,7 @@ body {
   position: relative;
 }
 
-/* Ambient Warm Glow Overlay */
+/* Deep Blood Red Ambient Glow Overlay */
 body::before {
   content: '';
   position: fixed;
@@ -90,9 +82,9 @@ body::before {
   width: 100vw;
   height: 100vh;
   background: 
-    radial-gradient(circle at 15% 15%, rgba(112, 85, 72, 0.3) 0%, transparent 45%),
-    radial-gradient(circle at 85% 75%, rgba(87, 78, 71, 0.35) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(68, 60, 60, 0.2) 0%, transparent 65%);
+    radial-gradient(circle at 15% 15%, rgba(163, 0, 30, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(102, 0, 16, 0.35) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(184, 0, 31, 0.12) 0%, transparent 65%);
   z-index: -1;
   pointer-events: none;
 }
@@ -131,18 +123,18 @@ button {
 .handwriting {
   font-family: var(--font-handwriting);
   font-size: 1.6rem;
-  color: var(--gold-warm);
+  color: var(--red-savage);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #F8F2EE 0%, #E8D4C8 50%, #B5A094 100%);
+  background: linear-gradient(135deg, #D60024 0%, #A3001E 50%, #660010 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
-.gradient-mocha {
-  background: linear-gradient(135deg, #705548 0%, #574e47 100%);
+.gradient-gold {
+  background: linear-gradient(135deg, #F3E5AB 0%, #E5C3A6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -153,17 +145,17 @@ button {
   align-items: center;
   gap: 0.5rem;
   padding: 0.45rem 1.2rem;
-  background: var(--accent-soft);
+  background: var(--red-soft);
   border: 1px solid var(--border-light);
   border-radius: 50px;
-  color: var(--gold-warm);
+  color: #D60024;
   font-weight: 700;
   font-size: 0.88rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-bottom: 1rem;
   backdrop-filter: blur(8px);
-  box-shadow: 0 0 15px rgba(112, 85, 72, 0.25);
+  box-shadow: 0 0 15px rgba(163, 0, 30, 0.25);
 }
 
 .section-title {
@@ -198,7 +190,7 @@ button {
   background: var(--bg-glass);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
   padding: 0.8rem 0;
   border-bottom: 1px solid var(--border-light);
 }
@@ -220,7 +212,7 @@ button {
 }
 
 .logo span {
-  color: var(--gold-warm);
+  color: #D60024;
 }
 
 .nav-links {
@@ -245,14 +237,14 @@ button {
   left: 0;
   width: 0%;
   height: 2px;
-  background: var(--color-warm-mocha);
+  background: #D60024;
   transition: var(--transition-smooth);
   border-radius: 2px;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--text-main);
+  color: #D60024;
 }
 
 .nav-link:hover::after,
@@ -262,23 +254,23 @@ button {
 
 .nav-btn {
   padding: 0.65rem 1.5rem;
-  background: linear-gradient(135deg, var(--color-warm-mocha) 0%, var(--color-smoky-walnut) 100%);
-  color: var(--text-main);
+  background: linear-gradient(135deg, #A3001E 0%, #52000D 100%);
+  color: var(--text-white);
   border-radius: 50px;
   font-weight: 700;
   font-size: 0.95rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px rgba(163, 0, 30, 0.45);
   transition: var(--transition-bounce);
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid var(--border-light);
+  border: 1px solid rgba(184, 0, 31, 0.4);
 }
 
 .nav-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(112, 85, 72, 0.6);
-  background: linear-gradient(135deg, #826354 0%, var(--color-warm-mocha) 100%);
+  box-shadow: 0 8px 30px rgba(184, 0, 31, 0.65);
+  background: linear-gradient(135deg, #B8001F 0%, #7A0014 100%);
 }
 
 .nav-mobile-toggle {
@@ -320,14 +312,14 @@ button {
   border-radius: 50px;
   font-size: 0.92rem;
   font-weight: 700;
-  color: var(--gold-warm);
+  color: #D60024;
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(10px);
   margin-bottom: 1.5rem;
 }
 
 .hero-badge i {
-  color: var(--gold-warm);
+  color: #D60024;
   animation: pulse-glow 2s infinite ease-in-out;
 }
 
@@ -359,22 +351,22 @@ button {
 
 .btn-primary {
   padding: 0.95rem 2.2rem;
-  background: linear-gradient(135deg, var(--color-warm-mocha) 0%, var(--color-smoky-walnut) 100%);
-  color: var(--text-main);
+  background: linear-gradient(135deg, #B8001F 0%, #660010 100%);
+  color: var(--text-white);
   border-radius: 50px;
   font-weight: 700;
   font-size: 1.05rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(163, 0, 30, 0.5);
   transition: var(--transition-bounce);
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  border: 1px solid var(--border-light);
+  border: 1px solid rgba(184, 0, 31, 0.4);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 35px rgba(112, 85, 72, 0.55);
+  box-shadow: 0 12px 35px rgba(184, 0, 31, 0.7);
 }
 
 .btn-secondary {
@@ -393,9 +385,9 @@ button {
 }
 
 .btn-secondary:hover {
-  background: var(--color-smoky-walnut);
-  border-color: var(--color-warm-mocha);
-  color: var(--text-main);
+  background: var(--red-soft);
+  border-color: #D60024;
+  color: #D60024;
   transform: translateY(-3px);
 }
 
@@ -417,7 +409,7 @@ button {
   font-family: var(--font-serif);
   font-size: 1.9rem;
   font-weight: 700;
-  color: var(--gold-warm);
+  color: #D60024;
   line-height: 1;
 }
 
@@ -443,7 +435,7 @@ button {
 }
 
 .polaroid-frame {
-  background: var(--color-slate-taupe);
+  background: #12070A;
   padding: 1.1rem 1.1rem 3.5rem 1.1rem;
   border-radius: 14px;
   box-shadow: var(--shadow-polaroid);
@@ -455,7 +447,7 @@ button {
 
 .polaroid-wrapper:hover .polaroid-frame {
   transform: rotate(0deg) scale(1.03);
-  border-color: var(--color-warm-mocha);
+  border-color: #D60024;
   box-shadow: var(--shadow-hover);
 }
 
@@ -481,7 +473,7 @@ button {
   text-align: center;
   font-family: var(--font-handwriting);
   font-size: 1.7rem;
-  color: var(--gold-warm);
+  color: var(--text-gold);
   font-weight: 700;
 }
 
@@ -518,8 +510,8 @@ button {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--accent-soft);
-  color: var(--gold-warm);
+  background: var(--red-soft);
+  color: #D60024;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -631,7 +623,7 @@ button {
 
 .strength-card:hover {
   transform: translateY(-5px);
-  border-color: var(--color-warm-mocha);
+  border-color: #D60024;
   box-shadow: var(--shadow-hover);
   background: var(--bg-card-hover);
 }
@@ -640,8 +632,8 @@ button {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: var(--accent-soft);
-  color: var(--gold-warm);
+  background: var(--red-soft);
+  color: #D60024;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -705,10 +697,10 @@ button {
 
 .project-role-badge {
   padding: 0.55rem 1.3rem;
-  background: var(--accent-soft);
+  background: var(--red-soft);
   border: 1px solid var(--border-light);
   border-radius: 50px;
-  color: var(--gold-warm);
+  color: #D60024;
   font-weight: 700;
   font-size: 0.9rem;
 }
@@ -737,8 +729,8 @@ button {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: var(--accent-soft);
-  color: var(--gold-warm);
+  background: var(--red-soft);
+  color: #D60024;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -762,7 +754,7 @@ button {
 
 /* Metrics Dashboard Banner inside SAC Project */
 .metrics-banner {
-  background: linear-gradient(135deg, #44403e 0%, #4d413b 100%);
+  background: linear-gradient(135deg, #12070A 0%, #210A10 100%);
   border: 1px solid var(--border-light);
   border-radius: 20px;
   padding: 1.8rem;
@@ -770,13 +762,13 @@ button {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(163, 0, 30, 0.2);
 }
 
 .metric-box h3 {
   font-family: var(--font-serif);
   font-size: 2.2rem;
-  color: var(--gold-warm);
+  color: #D60024;
   font-weight: 800;
 }
 
@@ -844,7 +836,7 @@ button {
 }
 
 .skills-column-title i {
-  color: var(--gold-warm);
+  color: #D60024;
 }
 
 .skills-pills {
@@ -865,20 +857,20 @@ button {
   align-items: center;
   gap: 0.6rem;
   transition: var(--transition-bounce);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .skill-pill i {
-  color: var(--gold-warm);
+  color: #D60024;
   font-size: 1rem;
 }
 
 .skill-pill:hover {
   transform: translateY(-3px) scale(1.04);
-  border-color: var(--color-warm-mocha);
-  color: var(--gold-warm);
-  box-shadow: 0 8px 20px rgba(112, 85, 72, 0.4);
-  background: var(--color-smoky-walnut);
+  border-color: #D60024;
+  color: #D60024;
+  box-shadow: 0 8px 20px rgba(184, 0, 31, 0.35);
+  background: var(--red-soft);
 }
 
 /* --------------------------------------------------------------------------
@@ -897,7 +889,7 @@ button {
 }
 
 .gallery-item {
-  background: var(--color-slate-taupe);
+  background: #12070A;
   border-radius: 16px;
   padding: 1rem 1rem 2.8rem 1rem;
   box-shadow: var(--shadow-polaroid);
@@ -918,7 +910,7 @@ button {
 .gallery-item:hover {
   transform: rotate(0deg) translateY(-8px) scale(1.02) !important;
   box-shadow: var(--shadow-hover);
-  border-color: var(--color-warm-mocha);
+  border-color: #D60024;
   z-index: 5;
 }
 
@@ -947,7 +939,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(112, 85, 72, 0.45);
+  background: rgba(163, 0, 30, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -969,7 +961,7 @@ button {
   text-align: center;
   font-family: var(--font-handwriting);
   font-size: 1.55rem;
-  color: var(--gold-warm);
+  color: var(--text-gold);
   font-weight: 700;
 }
 
@@ -1017,7 +1009,7 @@ button {
 
 .contact-item:hover {
   background: var(--bg-card-hover);
-  border-color: var(--color-warm-mocha);
+  border-color: #D60024;
   transform: translateX(6px);
   box-shadow: var(--shadow-soft);
 }
@@ -1026,8 +1018,8 @@ button {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: var(--accent-soft);
-  color: var(--gold-warm);
+  background: var(--red-soft);
+  color: #D60024;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1053,8 +1045,8 @@ button {
 .copy-btn {
   margin-left: auto;
   padding: 0.45rem 1rem;
-  background: var(--accent-soft);
-  color: var(--gold-warm);
+  background: var(--red-soft);
+  color: #D60024;
   border: 1px solid var(--border-light);
   border-radius: 50px;
   font-size: 0.85rem;
@@ -1063,12 +1055,12 @@ button {
 }
 
 .copy-btn:hover {
-  background: var(--color-warm-mocha);
-  color: var(--text-main);
+  background: #D60024;
+  color: #FFFFFF;
 }
 
 .contact-cta-box {
-  background: linear-gradient(135deg, #44403e 0%, #4d413b 100%);
+  background: linear-gradient(135deg, #12070A 0%, #21090F 100%);
   border-radius: 28px;
   padding: 3rem 2.5rem;
   box-shadow: var(--shadow-soft);
@@ -1102,7 +1094,7 @@ footer {
 }
 
 .footer-heart {
-  color: var(--gold-warm);
+  color: #D60024;
   margin: 0 0.2rem;
 }
 
@@ -1115,7 +1107,7 @@ footer {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(30, 25, 25, 0.94);
+  background: rgba(8, 3, 5, 0.96);
   backdrop-filter: blur(14px);
   display: flex;
   align-items: center;
@@ -1136,7 +1128,7 @@ footer {
   max-height: 85vh;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9);
   position: relative;
   border: 1px solid var(--border-light);
 }
@@ -1164,7 +1156,7 @@ footer {
 }
 
 .lightbox-close:hover {
-  background: var(--color-warm-mocha);
+  background: #D60024;
   transform: rotate(90deg);
 }
 
@@ -1173,12 +1165,12 @@ footer {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: var(--color-warm-mocha);
-  color: var(--text-main);
+  background: #D60024;
+  color: #FFFFFF;
   padding: 0.8rem 1.6rem;
   border-radius: 50px;
   font-weight: 700;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 25px rgba(184, 0, 31, 0.6);
   z-index: 3000;
   transform: translateY(100px);
   opacity: 0;
